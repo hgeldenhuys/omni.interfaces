@@ -1,0 +1,36 @@
+{
+	"id": 1001076839636,
+	"createdDate": 1561601736281,
+	"changedDate": 1561601736281,
+	"removed": false,
+	"name": "xxx",
+	"version": "1.0",
+	"facts": [
+		{
+			"path": "sssss",
+			"rule": {
+				"id": 1001661904664,
+				"createdDate": 1561428476382,
+				"changedDate": 1561604209040,
+				"removed": false,
+				"name": "FullNameReverse",
+				"description": "Full Name Reversed",
+				"label": "Reverse Fullname",
+				"statedAs": "LastName + \" \" + FirstName",
+				"dataType": "String"
+			},
+			"pathMapping": [
+				{
+					"path": "LastName",
+					"input": "LastName"
+				},
+				{
+					"path": "FirstName",
+					"input": "FirstName"
+				}
+			],
+			"id": null
+		}
+	],
+	"description": "eee"
+}
