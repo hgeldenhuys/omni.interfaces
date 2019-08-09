@@ -9,3 +9,4 @@ export * from "./domainmodel";
 export * from "./property";
 export * from "./module";
 export * from "./identifier";
+export * from "./expectedfact";

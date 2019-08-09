@@ -1,5 +1,5 @@
-import {DataType} from "../core/types";
 import {IdentifierInterface} from "./identifier";
+import {DataType, RuleBehaviour} from "../types";
 
 export interface RuleInterface extends IdentifierInterface {
     aliases?: string[];
@@ -7,4 +7,5 @@ export interface RuleInterface extends IdentifierInterface {
     statedAs?: string;
     dataType?: DataType;
     type?: "Rule";
+    behaviour?: RuleBehaviour;
 }
