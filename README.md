@@ -20,7 +20,7 @@ that we treat as a unit for the purpose of data changes via rules. Each aggregat
 and has a boundary. The boundary defines what is inside the aggregate. The root is a single starting-point
 entity.
 
- 📒 📔 Coincidentally, the Aggregate entity is an aggregate root object in OmniRules
+🧐🤓 Coincidentally, the Aggregate entity is an aggregate root object in OmniRules
 
 ```typescript
 interface AggregateInterface {
@@ -35,6 +35,8 @@ export interface VersionInterface {
     patch: number;
 }
 ```
+
+[See Aggregate](./blob/master/omni/interfaces/aggregate.ts)
 
 #### Fact
 
@@ -68,5 +70,7 @@ export interface PathMappingInterface {
 
 type DataType = "string" | "number" | "boolean" | "date" | "object" | "array" | "bigint";
 ```
+
+(See Fact)[./blob/master/omni/interfaces/fact.ts]
 
 Copyright Agileworks 2019
