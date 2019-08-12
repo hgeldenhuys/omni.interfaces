@@ -20,6 +20,8 @@ that we treat as a unit for the purpose of data changes via rules. Each aggregat
 and has a boundary. The boundary defines what is inside the aggregate. The root is a single starting-point
 entity.
 
+ 📒 📔 Coincidentally, the Aggregate entity is an aggregate root object in OmniRules
+
 ```typescript
 interface AggregateInterface {
     version?: VersionInterface;                 // Use this to audit your aggregates as they evolve
@@ -36,27 +38,35 @@ export interface VersionInterface {
 
 #### Fact
 
-Facts are either known beforehand or is derived by a business rule. From the POV of our aggregates,
-facts are datapoints that are immutable once known, or calculated once it is able to calclulate it's value.
+Facts are either known beforehand or are derived by a business rule. From the POV of our aggregates,
+facts are datapoints that are immutable once known, or calculated once it is sufficient other
+facts to determine it's result.
 
-Calculated facts are usually opportunistic and declarative, not imperative.
+Calculated facts are usually opportunistic and declarative, not imperative. They lie dormant until the 
+time is right. Aggregates can be executed over and over until all it's facts are known. Once known, the
+fact does not change. 
 
 Known facts are usually immutable and do not trigger a recalculation unless explicitly request by
 setting the RuleBehaviour of a rule to *AlwaysCalculate*  
 
 ```typescript
 interface FactInterface {
-    name?: string;
-    path?: string;
-    rule?: RuleInterface;
+    name?: string;                              // The name of the fact. Eg: Eligibility
+    path?: string;                              // Eg: Application.Eligibility 
+    rule?: RuleInterface;                       // See Rule
     rules?: RuleInterface[];
-    pathMapping?: PathMappingInterface[];
+    pathMapping?: PathMappingInterface[];       // Map dependency facts from you Business Object Model (BOM)
     dataType?: DataType;
-    type?: "Fact";
-    sampleValue?: any;
-    enumerations?: string[];
-    documentation?: string;
+    sampleValue?: any;                          // Useful for documentation and sample BOM generation
+    enumerations?: string[];                    // If dataType is string, you can specify valid enums
+    documentation?: string;                     // Again, always important to document everything
 }
+export interface PathMappingInterface {
+    replaceName: string;
+    withPath: string;
+}
+
+type DataType = "string" | "number" | "boolean" | "date" | "object" | "array" | "bigint";
 ```
 
 Copyright Agileworks 2019
