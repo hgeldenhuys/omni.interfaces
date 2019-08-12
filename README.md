@@ -36,7 +36,7 @@ export interface VersionInterface {
 }
 ```
 
-[See Aggregate](./blob/master/omni/interfaces/aggregate.ts)
+[See Aggregate](./omni/interfaces/aggregate.ts)
 
 #### Fact
 
@@ -71,6 +71,6 @@ export interface PathMappingInterface {
 type DataType = "string" | "number" | "boolean" | "date" | "object" | "array" | "bigint";
 ```
 
-(See Fact)[./blob/master/omni/interfaces/fact.ts]
+(See Fact)[./omni/interfaces/fact.ts]
 
 Copyright Agileworks 2019
