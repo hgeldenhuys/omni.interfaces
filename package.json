@@ -21,6 +21,7 @@
   "homepage": "https://www.agileworks.co.za/agileworks-community-license",
   "dependencies": {
     "@types/node": "^12.0.10",
+    "lodash": "^4.17.15",
     "typescript": "^3.5.1"
   },
   "devDependencies": {
