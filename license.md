@@ -1,4 +1,4 @@
-Agileworks Community License Agreement
+Agileworks Community OpenSource License Agreement
 Version 1.0
 
 This AgileWorks Community License Agreement Version 1.0 (the “Agreement”) sets
