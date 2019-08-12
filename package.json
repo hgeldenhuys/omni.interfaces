@@ -1,6 +1,6 @@
 {
   "name": "omni.interfaces",
-  "version": "0.0.17",
+  "version": "0.0.22",
   "description": "Omni Rules Interfaces & Contracts",
   "main": "index.js",
   "types": "index.d.ts",

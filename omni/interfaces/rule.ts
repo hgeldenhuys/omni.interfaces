@@ -8,4 +8,5 @@ export interface RuleInterface extends IdentifierInterface {
     dataType?: DataType;
     type?: "Rule";
     behaviour?: RuleBehaviour;
+    documentation?: string;
 }

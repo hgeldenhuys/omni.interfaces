@@ -7,5 +7,6 @@ export interface AggregateInterface extends IdentifierInterface {
     version?: VersionInterface;
     facts: FactInterface[];
     decisionObjectType?: DecisionObjectType;
-    type?: "Aggregate"
+    type?: "Aggregate";
+    documentation?: string;
 }

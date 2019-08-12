@@ -1,1 +1,1 @@
-export type RuleBehaviour = "Always" | "Normal" | "Some" | "Never";
+export type RuleBehaviour = "AlwaysCalculate" | "OnlyOnceWithAllFacts" | "OnceWithSomeFacts" | "Disabled";

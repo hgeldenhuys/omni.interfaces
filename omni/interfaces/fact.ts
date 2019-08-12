@@ -12,4 +12,5 @@ export interface FactInterface {
     type?: "Fact";
     sampleValue?: any;
     enumerations?: string[];
+    documentation?: string;
 }
